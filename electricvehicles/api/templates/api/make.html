@@ -1,0 +1,9 @@
+{% extends "./base.html" %}
+    {% block content%}
+        <table class="list">
+            <tr><th>EV manufacturer</th></tr>
+            {% for make in makes %}
+                <tr><td><a href="/makeVehicles/{{ make.id }}"> {{ make.vehicleMake }} </a></td></tr>
+            {% endfor %}
+        </table>
+    {% endblock %}

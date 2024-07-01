@@ -1,0 +1,12 @@
+{% extends "./base.html" %}
+    {% block content%}
+        <h1>Electric Vehicles:</h1>
+        <table class="list">
+            <button class="button"><a href="/create_vehicleModel/">Create new Vehicle</a></button>
+            <br/>
+            <tr><th>Model</th><th>Year</th></tr>
+            {% for evehicle in evehicles %}
+                <tr><td><a href="/evehicle/{{ evehicle.id }}"> {{ evehicle.vehicleModel }} </a></td><td>{{ evehicle.modelYear }}</td></tr>
+            {% endfor %}
+        </table>
+    {% endblock %}

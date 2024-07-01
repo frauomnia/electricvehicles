@@ -1,0 +1,55 @@
+body {
+    font-family: sans-serif;
+    margin: 0px;
+    border: 0px;
+    padding: 0px;
+}
+
+#application_title {
+    display: inline;
+}
+
+#header {
+    width: 100%;
+    background-color: rgb(129, 165, 129);
+    align-content: center;
+    text-align: center;
+    padding-top: 20px;
+}
+
+#nav {
+    width: 100%;
+    background-color: rgb(50, 84, 50);
+    padding: 10px;
+}
+#nav a{
+    color: white;
+    text-decoration: none;
+}
+#footer {
+    width: 100%;
+    padding-left: 10px;
+    float: left;
+}
+
+.content {
+    padding-left: 10px;;
+}
+
+.list {
+    text-align: left;
+}
+
+.details {
+    text-align: left;
+}
+
+.button {
+    padding: 10px;
+    font-size: 16px;
+    margin: 10px;
+}
+
+.button a {
+    text-decoration: none;
+}

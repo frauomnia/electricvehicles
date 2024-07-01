@@ -1,0 +1,56 @@
+{% extends "./base.html" %}
+{% block content%}
+        <h1>API ENDPOINTS:</h1>
+        <div>
+            <p>* POST : create a new vehicle while showing a random existing vehicle to replicate structure</p>
+            <a href="http://localhost:8080/api/vehicle/">http://localhost:8080/api/vehicle/</a>
+        </div>
+        <div>
+            <p>* GET : vehicle details including registeration locations and number of registered vehicle model in each location</p>
+            <a href="http://localhost:8080/api/vehicle/7866">http://localhost:8080/api/vehicle/6924</a>
+        </div>
+        <div>
+            <p>* GET : list of vehicle models by a specific manufacturer with electric vehicle type Battery Electric Vehicle (BEV)</p>
+            <a href="http://localhost:8080/api/vehicles/CHEVROLET">http://localhost:8080/api/vehicles/CHEVROLET</a>
+        </div>
+        <div>
+            <p>* GET : list of vehicles of a a specific manufacturer with same electric range as provided </p>
+            <a href="http://localhost:8080/api/vehicles/TESLA/200">http://localhost:8080/api/vehicles/TESLA/200</a>
+        </div>
+        <div>
+            <p>* GET : list of vehicle models filtered by registeration location and the count of vehicles registered in that location </p>
+            <a href="http://localhost:8080/api/location/98034">http://localhost:8080/api/location/98034</a>
+        </div>
+        <div> 
+            <p>* GET : list of EV charging stations filtered by their location and electric connector type </p>
+            <a href="http://localhost:8080/api/stations/99201/J1772">http://localhost:8080/api/stations/99201/J1772</a>
+        </div>
+
+        <h3>Database browser:</h3>
+        <div><a href="evehicles">Electric Vehicles</a></div>
+        <div><a href="make">EV models by manufacturer</a></div>
+        <div><a href="year">EV models by year</a></div>
+        <div><a href="location">EV charging stations by location</a></div>
+        <div><a href="chargingStations">EV charging stations</a></div>
+
+        <h3>Admin site:</h3>
+        <div> Username: Omnia </div>
+        <div> Password: 123abc </div>
+
+        <h3>Packages:</h3>
+        <div> Python 3.12.3 </div>
+        <div> Django==5.0.6 </div>
+        <div> 
+            <h4> Other packages: [also included in the requirements.txt file]</h4>
+            <span>djangorestframework==3.15.2</span><br>
+            <span>django-bootstrap4==24.3</span><br>
+            <span>factory-boy==3.3.0</span><br>  
+            <span>sqlparse==0.5.0</span><br> 
+            <span>python-dateutil==2.9.0.post0</span><br>
+            <span>asgiref==3.8.1</span><br>
+            <span>beautifulsoup4==4.12.3</span><br>
+            <span>six==1.16.0</span><br>
+            <span>soupsieve==2.5</span><br>
+            <span>sqlparse==0.5.0</span>
+        </div>
+{% endblock %}

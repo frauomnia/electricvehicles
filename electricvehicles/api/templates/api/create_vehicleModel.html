@@ -1,0 +1,10 @@
+{% extends "./base.html" %}
+    {% block content%}
+    {% load bootstrap4 %}
+        <h2>Add New Vehicle</h2>
+        <form action="/create_vehicleModel/" method="post" class="form">
+            {% csrf_token %}
+            {% bootstrap_form form %}
+            <input type="submit" value="Submit">
+        </form>
+    {% endblock %}

@@ -1,0 +1,22 @@
+{% extends "./base.html" %}
+    {% block content%}
+        <h1> Postal Code: {{ locationDetails.postalCode }} </h1>
+        <table class="details">
+            <tr><th>key</th><th>value</th></tr>
+            <tr><th>ID</th><td>{{ locationDetails.pk }}</td></tr>
+            <tr><th>City</th><td>{{ locationDetails.city }}</td></tr>
+            <tr><th>State</th><td>{{ locationDetails.state }}</td></tr>
+            <tr><th>County</th><td>{{ locationDetails.county }}</td></tr>
+            <tr><th>Electric charging stations located in {{ locationDetails.postalCode }}:</th></tr>
+            {% for station in chargingStations %}
+                <tr><td> {{ station.stationName }} <td></tr>
+                <tr><td> {{ station.stationAddress }} <td></tr>
+                {% if station.stationPhone == 'NULL' %}
+                <tr><td> Not Available <td></tr>
+                {% else %}
+                <tr><td> {{ station.stationPhone }} <td></tr>
+                {% endif %}
+                <tr><td> ------- <td></tr>
+            {% endfor %}
+        </table>
+    {% endblock %}

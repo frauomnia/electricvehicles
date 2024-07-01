@@ -1,0 +1,9 @@
+{% extends "./base.html" %}
+    {% block content%}
+        <table class="list">
+            <tr><th>EV Charging Stations</th></tr>
+            {% for chargingStation in chargingStations %}
+                <tr><td><a href="/echargingStation/{{ chargingStation.id }}"> {{ chargingStation.stationName }} </a></td></tr>
+            {% endfor %}
+        </table>
+    {% endblock %}

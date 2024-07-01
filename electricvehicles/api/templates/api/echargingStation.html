@@ -1,0 +1,17 @@
+{% extends "./base.html" %}
+    {% block content%}
+        <h1> {{ echargingStation.stationName }} </h1>
+        <table class="details">
+            <tr><th>key</th><th>value</th></tr>
+            <tr><th>Station Name</th><td>{{ echargingStation.stationName }}</td></tr>
+            <tr><th>Station Address</th><td>{{ echargingStation.stationAddress }}</td></tr>
+            <tr><th>Postal Code</th><td>{{ echargingStation.stationLocation }}</td></tr>
+            <tr><th>Station Phone</th><td>{{ echargingStation.stationPhone }}</td></tr>
+            {% with connectorType=echargingStation.connectorType%}
+                <tr><th>Electric Connector Type: </th><td>{{ connectorType }}</td></tr>
+            {% endwith %}
+            {% with accessCode=echargingStation.accessCode%}
+                <tr><th>Access Code: </th><td>{{ accessCode }}</td></tr>
+            {% endwith %}
+        </table>
+    {% endblock %}

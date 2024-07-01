@@ -1,0 +1,9 @@
+{% extends "./base.html" %}
+    {% block content%}
+        <table class="list">
+            <tr><th>Locations</th></tr>
+            {% for location in locations %}
+                <tr><td><a href="/locationDetails/{{ location.postalCode }}"> {{ location.postalCode }} </a></td></tr>
+            {% endfor %}
+        </table>
+    {% endblock %}

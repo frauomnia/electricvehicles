@@ -1,0 +1,9 @@
+{% extends "./base.html" %}
+    {% block content%}
+        <table class="list">
+            <tr><th>EV model</th><th>Model year</th></tr>
+            {% for vehicle in vehicles %}
+                <tr><td><a href="/evehicle/{{ vehicle.id }}"> {{ vehicle.vehicleModel }} </a></td><td>{{ vehicle.modelYear }}</td></tr>
+            {% endfor %}
+        </table>
+    {% endblock %}

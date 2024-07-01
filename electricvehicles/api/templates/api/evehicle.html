@@ -1,0 +1,24 @@
+{% extends "./base.html" %}
+    {% block content%}
+        <h1> {{ evehicle.vehicleModel }} </h1>
+        <table class="details">
+            <tr><th>key</th><th>value</th></tr>
+            <tr><th>ID</th><td>{{ evehicle.id }}</td></tr>
+            <tr><th>Model</th><td>{{ evehicle.vehicleModel }}</td></tr>
+            <tr><th>Model Year</th><td>{{ evehicle.modelYear }}</td></tr>
+            {% with range=evehicle.electricRange%}
+                <tr><th>Electric Range: </th><td>{{ range }}</td></tr>
+            {% endwith %}
+            {% with make=evehicle.vehicleMake%}
+                <tr><th>Vehicle Make: </th><td>{{ make }}</td></tr>
+            {% endwith %}
+            {% with type=evehicle.vehicleType%}
+            <tr><th>Electric Vehicle Type: </th><td>{{ type }}</td></tr>
+            {% endwith %}
+            <tr><th>Vehicles with the same model are registered in the following locations:</th></tr>
+            {% for location in locationLinks %}
+                <tr><td>{{ location.regLocation_id }}</td><td>{{ location.regLocation_id__count }}</td></tr>
+            {% endfor %}
+        </table>
+        <button class="button"><a href="/delete/{{ evehicle.id }}">DELETE</a></button>
+    {% endblock %}    
